@@ -5,7 +5,11 @@ from pathlib import Path
 from tracker import is_in_stock
 from notifier import send_email
 
-STATE_FILE = Path("state.json")
+STATE_FILE = Path("state.json") 
+
+Path("logs").mkdir(
+    exist_ok=True
+)
 
 logging.basicConfig(
     filename="logs/tracker.log",
