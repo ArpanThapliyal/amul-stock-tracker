@@ -47,4 +47,4 @@ def is_in_stock() -> bool:
 
         browser.close()
 
-        return True
+        return not is_sold_out
