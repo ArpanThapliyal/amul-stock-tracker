@@ -16,13 +16,6 @@ def is_in_stock() -> bool:
             wait_until="domcontentloaded",
             timeout=60000
         )
-        # ---------- DEBUG ----------
-        page.screenshot(path="page.png", full_page=True)
-
-        with open("page.html", "w", encoding="utf-8") as f:
-            f.write(page.content())
-        # ---------------------------
-
 
         pin_input = page.get_by_placeholder(
             "Enter Your Pincode"
