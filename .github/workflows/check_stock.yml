@@ -30,3 +30,11 @@ jobs:
           EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         run: python src/main.py
+      - name: Upload debug artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-files
+          path: |
+            page.png
+            page.html
